@@ -1,0 +1,21 @@
+{
+    "name":"pond/tunes-bundle",
+    "type": "symfony-bundle",
+    "description": "PondTunesBundle",
+    "license": "MIT",
+    "keywords": ["iTunes Webservice Search"],
+    "autoload": {
+        "psr-0": { "Pond\\TunesBundle": "" }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "pond/tunes": "*"
+    },
+    "target-dir": "Pond/TunesBundle",
+    "authors": [
+        {
+            "name": "Marcus Stöhr",
+            "email": "dafish@soundtrack-board.de"
+        }
+    ]
+}
