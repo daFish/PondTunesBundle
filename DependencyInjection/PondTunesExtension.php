@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the PondTunesBundle.
+ *
+ * (c) Marcus Stöhr <dafish@soundtrack-board.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Pond\TunesBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -12,7 +21,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class FmdbTitleExtension extends Extension
+class PondTunesExtension extends Extension
 {
     /**
      * {@inheritDoc}

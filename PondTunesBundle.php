@@ -1,12 +1,15 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: dafish
- * Date: 07.07.12
- * Time: 12:06
- * To change this template use File | Settings | File Templates.
+
+/*
+ * This file is part of the PondTunesBundle.
+ *
+ * (c) Marcus Stöhr <dafish@soundtrack-board.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
-namespace Pond\TunesBundle;
+
+namespace Pond\Tunes;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
