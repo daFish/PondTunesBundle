@@ -5,7 +5,7 @@ The PondTunesBundle allows the integration of PondTunes library.
 ## Installation
 Add the dependency for PondTunesBundle to your `composer.json`:
 
-::
+
     "require": {
         "pond/tunes-bundle": "*",
     }
@@ -13,7 +13,6 @@ Add the dependency for PondTunesBundle to your `composer.json`:
 ## Activation
 Register the bundle in your `AppKernel.php`:
 
-::
     // app/AppKernel.php
     public function registerBundles()
     {
@@ -27,7 +26,6 @@ Register the bundle in your `AppKernel.php`:
 ## Usage
 The bundle provides services for search and lookup the Apple iTunes Webservice.
 
-::
     <?php
     namespace Acme\DemoBundle\Controller;
 
