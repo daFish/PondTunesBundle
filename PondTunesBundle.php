@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Pond\Tunes;
+namespace Pond\TunesBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
