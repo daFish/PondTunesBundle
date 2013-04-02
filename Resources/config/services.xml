@@ -7,11 +7,15 @@
     <parameters>
         <parameter key="pond_tunes.search.class">Pond\Tunes\Search</parameter>
         <parameter key="pond_tunes.lookup.class">Pond\Tunes\Lookup</parameter>
+        <parameter key="pond_tunes.util.availability_check.class">Pond\Tunes\Util\AvailabilityCheck</parameter>
     </parameters>
 
     <services>
         <service id="pond_tunes.search" class="%pond_tunes.search.class%" />
         <service id="pond_tunes.lookup" class="%pond_tunes.lookup.class%" />
+        <service id="pond_tunes.util.availability_check" class="%pond_tunes.util.availability_check.class%">
+            <argument type="service" id="pond_tunes.lookup" />
+        </service>
     </services>
 
 </container>
