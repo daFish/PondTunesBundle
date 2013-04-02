@@ -9,7 +9,7 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "pond/tunes": "*"
+        "pond/tunes": "~0.3"
     },
     "target-dir": "Pond/TunesBundle",
     "authors": [
