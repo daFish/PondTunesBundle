@@ -5,14 +5,31 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
+        <!-- Adapter classes -->
+        <parameter key="pond_tunes.http.buzz.class">HttpAdapter\BuzzHttpAdapter</parameter>
+        <parameter key="pond_tunes.http.curl.class">HttpAdapter\CurlHttpAdapter</parameter>
+        <parameter key="pond_tunes.http.guzzle.class">HttpAdapter\GuzzleHttpAdapter</parameter>
+        <parameter key="pond_tunes.http.socket.class">HttpAdapter\SocketHttpAdapter</parameter>
+        <parameter key="pond_tunes.http.zend.class">HttpAdapter\ZendHttpAdapter</parameter>
+
+        <parameter key="pond_tunes.abstract.class">Pond\Tunes\Tunes</parameter>
         <parameter key="pond_tunes.search.class">Pond\Tunes\Search</parameter>
         <parameter key="pond_tunes.lookup.class">Pond\Tunes\Lookup</parameter>
         <parameter key="pond_tunes.util.availability_check.class">Pond\Tunes\Util\AvailabilityCheck</parameter>
     </parameters>
 
     <services>
-        <service id="pond_tunes.search" class="%pond_tunes.search.class%" />
-        <service id="pond_tunes.lookup" class="%pond_tunes.lookup.class%" />
+        <service id="pond_tunes.http.buzz" class="%pond_tunes.http.buzz.class%" />
+        <service id="pond_tunes.http.curl" class="%pond_tunes.http.curl.class%" />
+        <service id="pond_tunes.http.guzzle" class="%pond_tunes.http.guzzle.class%" />
+        <service id="pond_tunes.http.socket" class="%pond_tunes.http.socket.class%" />
+        <service id="pond_tunes.http.zend" class="%pond_tunes.http.zend.class%" />
+
+        <service id="pond_tunes.abstract" class="%pond_tunes.abstract.class%" abstract="true">
+            <argument type="service" id="pond_tunes.http.curl" />
+        </service>
+        <service id="pond_tunes.search" class="%pond_tunes.search.class%" parent="pond_tunes.abstract" />
+        <service id="pond_tunes.lookup" class="%pond_tunes.lookup.class%"  parent="pond_tunes.abstract" />
         <service id="pond_tunes.util.availability_check" class="%pond_tunes.util.availability_check.class%">
             <argument type="service" id="pond_tunes.lookup" />
         </service>
